@@ -10,7 +10,6 @@ import logging
 def sub_domains_enumeration(args):
     for arg in args:
         logging.info(arg)
-    # print("printing ..................... ", args)
 
 
 def main():
