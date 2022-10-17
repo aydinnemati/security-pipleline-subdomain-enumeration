@@ -7,7 +7,8 @@ import subprocess
 target_url = "aasaam.com"
 
 def sub_domains_enumeration(args):
-    subprocess.run(["pwd"])
+    cmdrun = subprocess.run(["pwd"])
+    logging.info(cmdrun)
     logging.info(target_url)
 
 
