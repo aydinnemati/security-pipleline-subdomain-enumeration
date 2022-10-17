@@ -9,6 +9,7 @@ import time
 
 def sub_domains_enumeration(args):
     logging.info(args)
+    print("printing .....................")
 
 
 def main():
