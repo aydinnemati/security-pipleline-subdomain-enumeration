@@ -6,4 +6,8 @@ def MyAwesomeJob(args):
     # raise Exception("Oh no, this job failed!")
 
 def main():
+    print(logging.basicConfig(level=logging.INFO))
+    print("+++++++++++++++++++++++++ seconf line =============================================")
     logging.basicConfig(level=logging.INFO)
+
+    
