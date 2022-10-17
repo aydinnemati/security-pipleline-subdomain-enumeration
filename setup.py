@@ -1,3 +1,4 @@
+from gaiasdk import sdk
 import logging
 
 def MyAwesomeJob(args):
@@ -6,8 +7,6 @@ def MyAwesomeJob(args):
     # raise Exception("Oh no, this job failed!")
 
 def main():
-    print(logging.basicConfig(level=logging.INFO))
-    print("+++++++++++++++++++++++++ seconf line =============================================")
     logging.basicConfig(level=logging.INFO)
-
-    
+    myjob = sdk.Job("MyAwesomeJob", "Do something awesome", MyAwesomeJob)
+    sdk.serve([myjob])
