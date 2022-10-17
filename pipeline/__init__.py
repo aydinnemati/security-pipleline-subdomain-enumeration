@@ -7,8 +7,7 @@ import os
 target_url = "aasaam.com"
 
 def sub_domains_enumeration(args):
-    aaaa = os.system("pwd")
-    logging.info(aaaa)
+    logging.info(os.system("pwd"))
     logging.info(target_url)
 
 
