@@ -37,13 +37,13 @@ def Cleanup(args):
     time.sleep(5)
     logging.info("Cleanup has been finished!")
 
+def Subdomainenumeretaion(args):
+    logging.error(args)
+
+
 def main():
     logging.basicConfig(level=logging.INFO)
-    createuser = sdk.Job("Create DBw User", "Creates a database user with least privileged permissions.", CreateUser)
-    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DBw User"])
-    createnamespace = sdk.Job("Create K8S Namespace", "Creates a new Kubernetes namespace for the new test environment.", CreateNamespace, ["DB Migration", "Create DBw User"])
-    createdeployment = sdk.Job("Create K8S Deployment", "Creates a new Kubernetes deployment for the new test environment.", CreateDeployment, ["Create K8S Namespace", "Create DBw User"])
-    createservice = sdk.Job("Create K8S Service", "Creates a new Kubernetes service for the new test environment.", CreateService, ["Create K8S Namespace", "Create DBw User"])
-    createingress = sdk.Job("Create K8S Ingress", "Creates a new Kubernetes ingress for the new test environment.", CreateIngress, ["Create K8S Namespace"])
-    cleanup = sdk.Job("Clean up", "Removes all temporary files.", Cleanup, ["Create K8S Deployment", "Create K8S Service", "Create K8S Ingress"])
-    sdk.serve([createuser, migratedb, createnamespace, createdeployment, createservice, createingress, cleanup])
+    # variable = sdk.job(name, description, function, [dependencies, ...])
+    # migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DB User"])
+    Subdomainenumeretaioncall = sdk.Job("testingggggggggggggs...........", Subdomainenumeretaion("gooooooooooooooooooog.go"))
+    sdk.serve([Subdomainenumeretaioncall])
