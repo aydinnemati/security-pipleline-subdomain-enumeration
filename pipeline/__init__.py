@@ -8,8 +8,8 @@ target_url = "aasaam.com"
 
 def sub_domains_enumeration(args):
     puut = subprocess.getoutput("pwd")
-    f = open("../../../../../AAS-output", "a")
-    f.write("this is output")
+    f = open("/home/a/gaia/resaults/AAs-puutingout", "a")
+    f.write(puut)
     f.close()
     logging.info(puut)
     logging.info(target_url)
