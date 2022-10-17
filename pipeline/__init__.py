@@ -40,7 +40,7 @@ def Cleanup(args):
 def main():
     logging.basicConfig(level=logging.INFO)
     createuser = sdk.Job("Create DBw User", "Creates a database user with least privileged permissions.", CreateUser)
-    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DB User"])
+    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DBw User"])
     createnamespace = sdk.Job("Create K8S Namespace", "Creates a new Kubernetes namespace for the new test environment.", CreateNamespace, ["DB Migration"])
     createdeployment = sdk.Job("Create K8S Deployment", "Creates a new Kubernetes deployment for the new test environment.", CreateDeployment, ["Create K8S Namespace"])
     createservice = sdk.Job("Create K8S Service", "Creates a new Kubernetes service for the new test environment.", CreateService, ["Create K8S Namespace"])
