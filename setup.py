@@ -7,4 +7,5 @@ setup(name='pipe 00 - subdomain enumeration',
       author_email='',
       install_requires=[
             'gaiasdk>=0.0.16',
+            'protobuf==3.19.*',
       ])
