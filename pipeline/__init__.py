@@ -38,7 +38,7 @@ def Cleanup(args):
     logging.info("Cleanup has been finished!")
 
 def Subdomainenumeretaion(args):
-    logging.error(args)
+    logging.info(args)
 
 
 def main():
