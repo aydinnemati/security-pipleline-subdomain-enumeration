@@ -1,16 +1,13 @@
 from gaiasdk import sdk
 import logging
 import time
-import subprocess
+import os
 
 
 target_url = "aasaam.com"
 
 def sub_domains_enumeration(args):
-    cmdrun = subprocess.run(["pwd"], capture_output=True, text=True)
-    # print(cmdrun)
-    logging.info(cmdrun.stdout)
-    logging.info(cmdrun.stderr)
+    logging.info("output is ---------------->>>>", os.system("pwd"))
     logging.info(target_url)
 
 
