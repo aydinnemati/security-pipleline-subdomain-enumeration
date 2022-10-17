@@ -45,5 +45,5 @@ def main():
     logging.basicConfig(level=logging.INFO)
     # variable = sdk.job(name, description, function, [dependencies, ...])
     # migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", MigrateDB, ["Create DB User"])
-    Subdomainenumeretaioncall = sdk.Job("testingggggggggggggs...........", Subdomainenumeretaion("gooooooooooooooooooog.go"))
+    Subdomainenumeretaioncall = sdk.Job("testingggggggggggggs...........", "desciriptions are useless", Subdomainenumeretaion("gooooooooooooooooooog.go"))
     sdk.serve([Subdomainenumeretaioncall])
