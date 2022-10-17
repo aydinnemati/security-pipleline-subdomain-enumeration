@@ -14,6 +14,6 @@ def sub_domains_enumeration(args):
 def main():
     logging.basicConfig(level=logging.INFO)
     # variable = sdk.job(name, description, function, [dependencies, ...])
-    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", CreateUser, ["Create DB User"])
+    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", CreateUser)
     sub_domains_enumeration_call = sdk.Job("MY TEST JOB NAME IS SUNDOMAINS ENUMERATION", "desciriptions are useless", sub_domains_enumeration("aydin.com"))
     sdk.serve([sub_domains_enumeration_call, migratedb])
