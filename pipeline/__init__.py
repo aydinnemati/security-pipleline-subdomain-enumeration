@@ -8,7 +8,7 @@ import logging
 #     logging.info("CreateUser has been finished!")
 
 def sub_domains_enumeration(args):
-    logging.info(args)
+    logging.info("args")
     # print("printing ..................... ", args)
 
 
