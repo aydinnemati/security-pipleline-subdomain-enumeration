@@ -7,8 +7,8 @@ import logging
 #     time.sleep(5)
 #     logging.info("CreateUser has been finished!")
 
-def sub_domains_enumeration(args, url):
-    logging.info(url)
+def sub_domains_enumeration(args):
+    logging.info(args)
 
 
 def main():
