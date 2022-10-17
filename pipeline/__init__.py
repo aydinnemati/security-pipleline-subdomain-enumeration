@@ -2,18 +2,14 @@ from gaiasdk import sdk
 import logging
 import time
 
-def CreateUser(args):
-    logging.info(args)
-    time.sleep(5)
-    logging.info("CreateUser has been finished!")
+target_url = "aasaam.com"
 
 def sub_domains_enumeration(args):
-    logging.info(str(args))
+    logging.info(target_url)
 
 
 def main():
     logging.basicConfig(level=logging.INFO)
     # variable = sdk.job(name, description, function, [dependencies, ...])
-    migratedb = sdk.Job("DB Migration", "Imports newest test data dump and migrates to newest version.", CreateUser("a"))
-    sub_domains_enumeration_call = sdk.Job("MY TEST JOB NAME IS SUNDOMAINS ENUMERATION", "desciriptions are useless", sub_domains_enumeration("aydin.com"))
-    sdk.serve([sub_domains_enumeration_call, migratedb])
+    sub_domains_enumeration_call = sdk.Job("MY TEST JOB NAME IS SUNDOMAINS ENUMERATION", "desciriptions are useless", sub_domains_enumeration)
+    sdk.serve([sub_domains_enumeration_call])
